@@ -6,10 +6,10 @@ Below is the high-level architecture diagram illustrating the data flow and core
 
 ```mermaid
 graph TD
-    A[User] --> B[React Frontend (Vite + Tailwind)]
-    B --> C[Questionnaire & Recommendation Engine]
-    C --> D[Healthcare Scheme Dataset (JSON)]
-    D --> E[Scheme Results & Details]
+    A[User] --> B[React Frontend]
+    B --> C[Questionnaire and Recommendation Engine]
+    C --> D[Healthcare Scheme Dataset]
+    D --> E[Scheme Results and Details]
 ```
 
 ### Component Breakdown
