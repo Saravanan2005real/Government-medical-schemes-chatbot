@@ -89,3 +89,82 @@ The application follows a highly scalable, industry-standard layered architectur
 5. The dataset is filtered within the Data Layer.
 6. Matching schemes are generated.
 7. Results and detailed scheme information are displayed back to the user via the Output Layer.
+
+---
+
+## User Flow Architecture Diagram
+
+Below is a detailed enterprise-level workflow diagram that clearly explains how a citizen uses the TN Health Scheme Decoder from initial input to final recommendations.
+
+```mermaid
+flowchart TD
+
+A[User Opens TN Health Scheme Decoder] --> B[Enter Medical Issue]
+B --> C[Select District or City]
+C --> D[Click Find Schemes]
+
+D --> E[Eligibility Questionnaire]
+
+E --> F[Answer Age Question]
+F --> G[Answer Gender Question]
+G --> H[Answer Income Question]
+H --> I[Answer Insurance Question]
+I --> J[Answer Additional Eligibility Questions]
+
+J --> K[Click Continue]
+
+K --> L[Recommendation Engine]
+L --> M[Evaluate Eligibility Rules]
+M --> N[Filter Healthcare Scheme Dataset]
+N --> O[Generate Matching Schemes]
+
+O --> P[Results Dashboard]
+
+P --> Q[Primary Recommended Scheme]
+P --> R[Other Matching Schemes]
+
+Q --> S[Benefits]
+Q --> T[Eligibility Criteria]
+Q --> U[Required Documents]
+Q --> V[How to Apply]
+
+R --> W[Alternative Recommendations]
+
+V --> X[User Reviews and Applies]
+W --> X
+```
+
+### Detailed User Journey
+
+#### 1. Initial Engagement
+- **User opens the application:** The user arrives at the TN Health Scheme Decoder landing page.
+- **User enters their medical issue:** The user inputs their specific healthcare need or condition.
+- **User selects their district/city:** The user specifies their location to ensure geographically relevant scheme suggestions.
+- **User clicks "Find Schemes":** This triggers the initial search and transitions the user to the detailed assessment.
+
+#### 2. Eligibility Evaluation
+- **The application displays an eligibility questionnaire:** A multi-step form appears to collect necessary background information.
+- **User answers eligibility questions:** The user provides specific details crucial for accurate matching, such as:
+  - Age
+  - Gender
+  - Income category
+  - Insurance status
+  - Other scheme-specific questions
+- **User clicks Continue:** The completed profile is submitted for evaluation.
+
+#### 3. Processing & System Evaluation
+- **The Recommendation Engine processes the responses:** The core logic module takes the user's inputs.
+- **The system evaluates eligibility criteria:** The rules engine runs complex evaluations against all known parameters.
+- **The Healthcare Scheme Dataset is filtered:** Ineligible schemes are discarded from the dataset in real-time.
+- **Matching schemes are generated:** A curated list of valid healthcare schemes is produced.
+
+#### 4. Results & Application
+- **The Results Dashboard is displayed:** The user is presented with an intuitive summary of their matched options.
+- **The user can view:**
+  - **Primary recommended scheme:** The most highly relevant match for their situation.
+  - **Other matching schemes:** Secondary or supplementary scheme options.
+  - **Benefits:** The financial and medical coverage provided by each scheme.
+  - **Eligibility criteria:** A transparent breakdown of why they qualified.
+  - **Required documents:** A comprehensive checklist of paperwork needed.
+  - **How to apply:** Step-by-step instructions on the enrollment process.
+- **User reviews and applies:** The user reviews their personalized recommendations and takes actionable steps to apply for their chosen scheme.
